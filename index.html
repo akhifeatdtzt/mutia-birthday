@@ -60,7 +60,7 @@
 
     <!-- Footer -->
     <footer class="fade-in">
-        <p>"May your days always bloom as beautifully as these flowers. Happy Birthday, Mutia Fitri"</p>
+        <p>"May your days always bloom as beautifully as these flowers. Happy Birthday, Mutiaa"</p>
         <div style="margin-top: 40px; font-size: 0.9rem; color: var(--text-light);">
             Specially made by Desta Erich
         </div>
@@ -106,14 +106,13 @@
             });
 
             // Mulai animasi kelopak bunga berguguran setelah web dibuka
-            petalInterval = setInterval(createPetal, 400);
+            petalInterval = setInterval(createPetal, 600);
 
-            // Hapus elemen cover dari dokumen setelah transisi selesai agar tidak mengganggu scroll
             setTimeout(() => {
                 cover.remove();
             }, 1000);
         }
-        setInterval(createPetal, 400);
+        setInterval(createPetal, 600);
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
