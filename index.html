@@ -87,7 +87,32 @@
                 petal.remove();
             }, 10000);
         }
+                // Fungsi ketika tombol "Buka Surat" diklik
+        function openWebsite() {
+            const cover = document.getElementById('cover-screen');
+            const bgMusic = document.getElementById('bg-music');
+            const musicBtn = document.getElementById('music-btn');
 
+            // Efek transisi menutup cover (slide up)
+            cover.style.transform = 'translateY(-100vh)';
+            
+            // Putar musik secara otomatis (Disetujui browser karena ada aksi klik tombol)
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicBtn.innerHTML = '⏸️';
+                musicBtn.style.background = '#d16b8c';
+            }).catch(e => {
+                console.error("Gagal memutar musik:", e);
+            });
+
+            // Mulai animasi kelopak bunga berguguran setelah web dibuka
+            petalInterval = setInterval(createPetal, 400);
+
+            // Hapus elemen cover dari dokumen setelah transisi selesai agar tidak mengganggu scroll
+            setTimeout(() => {
+                cover.remove();
+            }, 1000);
+        }
         setInterval(createPetal, 400);
 
         const observer = new IntersectionObserver((entries) => {
