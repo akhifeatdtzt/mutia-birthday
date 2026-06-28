@@ -33,6 +33,56 @@ h1, h2, h3 {
     color: #d16b8c;
 }
 
+/* Style Halaman Pembuka / Cover Screen */
+#cover-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--mint-green) 50%, var(--pink) 100%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+    padding: 20px;
+}
+
+.cover-content h1 {
+    font-size: 3rem;
+    margin: 10px 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
+}
+
+.cover-content p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+#open-btn {
+    padding: 15px 35px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: white;
+    color: #d16b8c;
+    border: 2px solid var(--pink);
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+#open-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--pink);
+    color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
 /* Container & Layout */
 .container {
     max-width: 1000px;
