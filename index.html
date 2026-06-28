@@ -103,7 +103,9 @@
                 musicBtn.innerHTML = '🎵';
                 musicBtn.style.background = 'var(--pink)';
             } else {
-                bgMusic.play().catch(e => console.log("Tambahkan file audio terlebih dahulu di tag <audio>."));
+                bgMusic.play().catch(e => {
+                    console.error("Gagal memutar musik. Pastikan file 'bisarahanew.mp3' berada di folder yang sama dan penulisan namanya sudah benar.", e);
+                });
                 musicBtn.innerHTML = '⏸️';
                 musicBtn.style.background = '#d16b8c';
             }
